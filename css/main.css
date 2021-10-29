@@ -19,6 +19,9 @@
   scale: 1;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
 html {
   box-sizing: border-box;
   font: normal 100%/1.3 "Montserrat", sans-serif;
@@ -42,13 +45,24 @@ body {
 img {
   max-width: 100%;
 }
+
 /* base container */
 .container {
   margin: 0;
   padding: 0 1rem;
+  text-align: center;
 }
 
-/* type hierarchy */
+/* heading text style */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* base type hierarchy */
 h1 {
   font-size: 1.802rem;
 }
@@ -74,15 +88,39 @@ small,
   font-size: 0.889rem;
 }
 
+/* uppercase text*/
+a {
+  text-transform: uppercase;
+}
+
+/* paragraph text style  */
+p {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* copyright text style */
+small {
+  font-style: italic;
+}
+
 /* - - - - - - Navbar - - - - - - */
 
 .navbar .container {
-  padding: 2rem 1rem;
-  background-color: #4d616b;
+  padding: 1rem 1.5rem;
+  background-color: #354561;
 }
 
 .navbar .logo {
-  max-width: 15rem;
+  display: inline-block;
+  max-width: 50%;
+}
+
+/* navBar moves with scroll */
+.navbar {
+  position: sticky;
+  top: 0;
 }
 
 .nav ul {
@@ -102,11 +140,10 @@ small,
 
 .nav a:hover,
 :focus {
-  color: #d86358;
+  color: #5287e4;
 }
 
 /* - - - - - - Main - - - - - - */
-
 /* hero banner section */
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -151,7 +188,6 @@ small,
 }
 
 /* cards section */
-
 .cards .container {
   display: flex;
   flex-direction: column;
@@ -164,7 +200,7 @@ small,
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #388fbf;
+  border: 2px solid #6fb3db;
   border-radius: 10px;
   padding: 0.5rem;
   margin-bottom: 2rem;
@@ -173,7 +209,11 @@ small,
 
 .card-content {
   text-align: center;
-  color: #388fbf;
+  color: #6fb3db;
+}
+
+.card-content:hover {
+  color: #f54915;
 }
 
 .card-content h2,
@@ -184,7 +224,7 @@ p {
 .card-img {
   width: 100%;
   text-align: center;
-  background-color: #388fbf;
+  background-color: #6fb3db;
 }
 
 /* about section */
@@ -224,7 +264,6 @@ p {
 }
 
 /* - - - - - - - - - - Footer - - - - - - - - - - */
-
 .footer {
   text-align: center;
 }
@@ -254,19 +293,29 @@ small {
 
 /* nav footer */
 .footer > .container {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   background-color: #5b8c88;
+}
+
+.nav-footer a:hover,
+:focus {
+  color: #2bc5b8;
 }
 
 /* sub footer */
 .sub-footer {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   background-color: #4d7285;
+}
+
+.sub-footer a:hover,
+:focus {
+  color: #63b0d6;
 }
 
 /* - - - - - mid-screen 600px - - - - - */
 @media only screen and (min-width: 37.5em) {
-  /* type hierarchy */
+  /* mid size type hierarchy */
   h1 {
     margin-top: 0;
     font-size: 2.488rem;
@@ -288,22 +337,22 @@ small {
     font-size: 1.2rem;
   }
 
+  a,
+  p {
+    font-size: 1.05rem;
+  }
   small,
   .text_small {
     font-size: 0.833rem;
   }
+
   /* - - - - - - Navbar - - - - - - */
   .navbar .container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0;
-  }
-
-  .navbar {
-    position: sticky;
-    top: 0;
+    padding: 2rem;
   }
 
   .nav ul {
@@ -344,7 +393,8 @@ small {
 
   /* about section */
   .about .container {
-    display: flex;
+    display: inline-flex;
+
     padding: 2rem;
   }
 
@@ -361,6 +411,11 @@ small {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 1rem;
+  }
+
+  .about-content h2 {
+    margin-bottom: 0.5rem;
   }
 
   /* - - - - - - Footer - - - - - - */
@@ -381,8 +436,8 @@ small {
 }
 
 /* - - - - - large-screen 900px - - - - - */
-@media only screen and (min-width: 62.5em) {
-  /* type hierarchy */
+@media only screen and (min-width: 60em) {
+  /* large size type hierarchy */
   h1 {
     font-size: 2.986rem;
   }
@@ -403,6 +458,11 @@ small {
     font-size: 1.44rem;
   }
 
+  a,
+  p {
+    font-size: 1.2rem;
+  }
+
   small,
   .text_small {
     font-size: 0.833rem;
@@ -410,7 +470,12 @@ small {
 
   /* - - - - - - NavBar - - - - - - */
   .navbar .container {
-    gap: 10rem;
+    gap: 5rem;
+  }
+
+  .navbar .logo {
+    display: inline-block;
+    max-width: 40%;
   }
 
   .nav ul {
@@ -419,7 +484,7 @@ small {
 
   /* - - - - - - Main - - - - - - */
   .hero-content {
-    max-width: 40rem;
+    max-width: 50rem;
   }
 
   .cards .container {
@@ -429,6 +494,11 @@ small {
 
   .card-content {
     flex-grow: 1;
+  }
+
+  .img-wrap {
+    display: block;
+    max-width: 25rem;
   }
 
   /* - - - - - - Footer - - - - - - */
