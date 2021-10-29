@@ -109,7 +109,7 @@ small {
 
 .navbar .container {
   padding: 1rem 1.5rem;
-  background-color: #354561;
+  background-color: #324c7a;
 }
 
 .navbar .logo {
@@ -146,7 +146,7 @@ small {
 /* - - - - - - Main - - - - - - */
 /* hero banner section */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("../img/hero-banner.jpg");
   background-size: cover;
   background-position: center;
@@ -176,15 +176,15 @@ small {
 .btn {
   display: flex;
   text-decoration: none;
-  color: #30bfb1;
-  border: 2px solid #30bfb1;
+  color: #7bc2eb;
+  border: 2px solid #7bc2eb;
   border-radius: 1rem;
   padding: 1rem;
 }
 
 .btn:hover {
   color: #fff;
-  background-color: #30bfb1;
+  background-color: #54a3d1;
 }
 
 /* cards section */
@@ -200,7 +200,7 @@ small {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #6fb3db;
+  border: 2px solid #4094c5;
   border-radius: 10px;
   padding: 0.5rem;
   margin-bottom: 2rem;
@@ -209,7 +209,7 @@ small {
 
 .card-content {
   text-align: center;
-  color: #6fb3db;
+  color: #4094c5;
 }
 
 .card-content:hover {
@@ -224,7 +224,7 @@ p {
 .card-img {
   width: 100%;
   text-align: center;
-  background-color: #6fb3db;
+  background-color: #4094c5;
 }
 
 /* about section */
@@ -294,23 +294,23 @@ small {
 /* nav footer */
 .footer > .container {
   padding: 2rem 0;
-  background-color: #5b8c88;
+  background-color: #324c7a;
 }
 
 .nav-footer a:hover,
 :focus {
-  color: #2bc5b8;
+  color: #5287e4;
 }
 
 /* sub footer */
 .sub-footer {
   padding: 2rem 0;
-  background-color: #4d7285;
+  background-color: #233658;
 }
 
 .sub-footer a:hover,
 :focus {
-  color: #63b0d6;
+  color: #499bc4;
 }
 
 /* - - - - - mid-screen 600px - - - - - */
@@ -352,11 +352,11 @@ small {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   .nav ul {
-    gap: 2rem;
+    gap: 1.25rem;
   }
 
   .navbar img {
