@@ -49,7 +49,7 @@ img {
 /* base container */
 .container {
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
   text-align: center;
 }
 
@@ -107,20 +107,15 @@ small {
 
 /* - - - - - - Navbar - - - - - - */
 
-.navbar .container {
-  padding: 1rem 1.5rem;
+.navbar {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   background-color: #324c7a;
 }
 
 .navbar .logo {
   display: inline-block;
   max-width: 50%;
-}
-
-/* navBar moves with scroll */
-.navbar {
-  position: sticky;
-  top: 0;
 }
 
 .nav ul {
@@ -130,7 +125,7 @@ small {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .nav a {
@@ -146,12 +141,12 @@ small {
 /* - - - - - - Main - - - - - - */
 /* hero banner section */
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../img/hero-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,8 +187,8 @@ small {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 0 0 0;
-  margin: 0 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .card {
@@ -230,29 +225,18 @@ p {
 /* about section */
 .about {
   text-align: center;
-  background-color: #9cb9a7;
+  background-color: #546c92;
 }
 
 .about-content {
   color: #fff;
-  padding: 0 1.5rem 2rem 1.5rem;
+  padding-bottom: 2rem;
 }
 
-.about-content p {
-  padding-bottom: 1rem;
-}
-
-.about-content .btn {
+.btn {
   display: inline-block;
   align-items: center;
   padding: 1rem 2rem;
-  color: #0b3d46;
-  border: 2px solid #0b3d46;
-}
-
-.about-content .btn:hover {
-  color: #fff;
-  background-color: #0b3d46;
 }
 
 /* about section - image  */
@@ -268,11 +252,11 @@ p {
   text-align: center;
 }
 
-.footer ul {
+.footer .container ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 1.5rem;
   margin: 0;
   padding: 1rem 0;
@@ -293,7 +277,7 @@ small {
 
 /* nav footer */
 .footer > .container {
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   background-color: #324c7a;
 }
 
@@ -346,19 +330,25 @@ small {
     font-size: 0.833rem;
   }
 
+  .container {
+    padding: 1rem 1.5rem;
+  }
+
   /* - - - - - - Navbar - - - - - - */
   .navbar .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 2rem 1rem;
   }
 
   .nav ul {
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
+  .logo {
+    text-align: left;
+  }
   .navbar img {
     max-width: 70%;
   }
@@ -373,10 +363,11 @@ small {
 
   .card-content {
     padding-left: 1rem;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     flex-grow: 1;
   }
 
@@ -394,8 +385,8 @@ small {
   /* about section */
   .about .container {
     display: inline-flex;
-
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .about .img-wrap {
@@ -411,7 +402,7 @@ small {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 1rem;
   }
 
   .about-content h2 {
@@ -422,16 +413,15 @@ small {
   .footer > .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
   .sub-footer > .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
   }
 }
 
@@ -468,11 +458,10 @@ small {
     font-size: 0.833rem;
   }
 
-  /* - - - - - - NavBar - - - - - - */
-  .navbar .container {
-    gap: 5rem;
+  .container {
+    padding: 1rem 5rem;
   }
-
+  /* - - - - - - NavBar - - - - - - */
   .navbar .logo {
     display: inline-block;
     max-width: 40%;
@@ -488,17 +477,32 @@ small {
   }
 
   .cards .container {
-    margin: 0 1rem;
-    width: 60%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .col {
+    flex: 1;
+  }
+
+  .card-img {
+    max-width: 100%;
+    flex-grow: unset;
   }
 
   .card-content {
-    flex-grow: 1;
-  }
-
-  .img-wrap {
-    display: block;
-    max-width: 25rem;
+    display: flex;
+    padding: 0 1rem;
+    text-align: center;
   }
 
   /* - - - - - - Footer - - - - - - */
