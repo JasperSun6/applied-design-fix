@@ -167,7 +167,7 @@ small {
   padding-bottom: 2rem;
 }
 
-/* base button */
+/* button layout */
 .btn {
   display: flex;
   text-decoration: none;
@@ -207,6 +207,7 @@ small {
   color: #4094c5;
 }
 
+/* highlight text  */
 .card-content:hover {
   color: #f54915;
 }
@@ -277,10 +278,9 @@ small {
 
 /* nav footer */
 .footer > .container {
-  /* padding: 2rem 0; */
   background-color: #324c7a;
 }
-
+/* highlight text  */
 .nav-footer a:hover,
 :focus {
   color: #5287e4;
@@ -288,10 +288,10 @@ small {
 
 /* sub footer */
 .sub-footer {
-  padding: 2rem 0;
+  padding-top: 1rem;
   background-color: #233658;
 }
-
+/* highlight text  */
 .sub-footer a:hover,
 :focus {
   color: #499bc4;
@@ -429,11 +429,11 @@ small {
 @media only screen and (min-width: 60em) {
   /* large size type hierarchy */
   h1 {
-    font-size: 2.986rem;
+    font-size: 2.686rem;
   }
 
   h2 {
-    font-size: 2.441rem;
+    font-size: 2.141rem;
   }
 
   h3 {
@@ -455,7 +455,7 @@ small {
 
   small,
   .text_small {
-    font-size: 0.833rem;
+    font-size: 0.963rem;
   }
 
   .container {
@@ -500,17 +500,8 @@ small {
   }
 
   .card-content {
-    display: flex;
-    padding: 0 1rem;
+    flex: 1;
+    padding: 0;
     text-align: center;
-  }
-
-  /* - - - - - - Footer - - - - - - */
-  .nav-footer ul {
-    gap: 4rem;
-  }
-
-  .sub-footer ul {
-    gap: 5rem;
   }
 }
